@@ -108,7 +108,7 @@ exports.run = {
                print += commands.sort((a, b) => a.usage.localeCompare(b.usage)).map(v => `	◦  ${isPrefix + v.usage} ${v.use}`).join('\n')
             }
             client.menu[id] = [
-               await client.sendMessageModify(m.chat, print + '\n\n' + global.footer, m, {
+               await client.sendMessageModify(m.chat, print + '\n', m, {
                   ads: false,
                   largeThumb: true,
                   url: global.db.setting.link
@@ -228,7 +228,7 @@ exports.run = {
                }).join('\n')
             }
             client.menu[id] = [
-               await client.sendMessageModify(m.chat, print + '\n\n' + global.footer, m, {
+               await client.sendMessageModify(m.chat, print + '\n', m, {
                   ads: false,
                   largeThumb: true,
                   url: global.db.setting.link
