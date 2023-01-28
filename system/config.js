@@ -33,18 +33,18 @@ global.botname = `© HanBotz`
 global.footer = 'https://saweria.co/hanbotz'
 // Global status
 global.status = Object.freeze({
-   wait: Func.texted('bold', 'Processed . . .'),
-   invalid: Func.texted('bold', 'URL is Invalid!'),
-   wrong: Func.texted('bold', 'Wrong format!'),
-   getdata: Func.texted('bold', 'Scraping metadata . . .'),
-   fail: Func.texted('bold', 'Can\'t get metadata!'),
-   error: Func.texted('bold', 'Error occurred!'),
-   errorF: Func.texted('bold', 'Sorry this feature is in error.'),
-   premium: Func.texted('bold', 'This feature only for premium user.'),
-   owner: Func.texted('bold', 'This command only for owner.'),
-   god: Func.texted('bold', 'This command only for Master'),
-   group: Func.texted('bold', 'This command will only work in groups.'),
-   botAdmin: Func.texted('bold', 'This command will work when I become an admin.'),
-   admin: Func.texted('bold', 'This command only for group admin.'),
-   private: Func.texted('bold', 'Use this command in private chat.')
+   wait: Function.texted('bold', 'Processed . . .'),
+   invalid: Function.texted('bold', 'URL is Invalid!'),
+   wrong: Function.texted('bold', 'Wrong format!'),
+   getdata: Function.texted('bold', 'Scraping metadata . . .'),
+   fail: Function.texted('bold', 'Can\'t get metadata!'),
+   error: Function.texted('bold', 'Error occurred!'),
+   errorF: Function.texted('bold', 'Sorry this feature is in error.'),
+   premium: Function.texted('bold', 'This feature only for premium user.'),
+   owner: Function.texted('bold', 'This command only for owner.'),
+   god: Function.texted('bold', 'This command only for Master'),
+   group: Function.texted('bold', 'This command will only work in groups.'),
+   botAdmin: Function.texted('bold', 'This command will work when I become an admin.'),
+   admin: Function.texted('bold', 'This command only for group admin.'),
+   private: Function.texted('bold', 'Use this command in private chat.')
 })
