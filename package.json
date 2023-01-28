@@ -7,7 +7,7 @@
       "start": "node ."
    },
    "engines": {
-      "node": "14.x",
+      "node": "14.21.2",
       "npm": "8.x"
    },
    "repository": {
