@@ -120,9 +120,9 @@ const connect = async () => {
       let text_left = `+tag left from this group for no apparent reason.`
       let groupSet = global.db.groups.find(v => v.jid == room.id)
       try {
-         pic = await Function.fetchBuffer(await client.profilePictureUrl(member, 'image'))
+         pic = await Func.fetchBuffer(await client.profilePictureUrl(member, 'image'))
       } catch {
-         pic = await Function.fetchBuffer(await client.profilePictureUrl(room.id, 'image'))
+         pic = await Func.fetchBuffer(await client.profilePictureUrl(room.id, 'image'))
       }
       if (room.action == 'add') {
          if (groupSet.localonly) {
@@ -151,7 +151,7 @@ const connect = async () => {
    client.ws.on('CB:call', async json => {
       if (json.content[0].tag == 'offer') {
          let object = json.content[0].attrs['call-creator']
-         await Function.delay(2000)
+         await Func.delay(2000)
          await client.updateBlockStatus(object, 'block')
       }
    })
