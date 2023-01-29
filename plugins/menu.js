@@ -1,6 +1,6 @@
 const fs = require('fs')
 exports.run = {
-   usage: ['menu', 'help', 'bot', 'command'],
+   usage: ['menu'],
    hidden: ['menutype'],
    async: async (m, {
       client,
