@@ -37,8 +37,8 @@ module.exports = (m) => {
       if (group) {
          if (!isNumber(group.activity)) group.activity = 0
          if (!('autoread' in group)) group.autoread = true
-         if (!('antidelete' in group)) group.antidelete = true
-         if (!('antilink' in group)) group.antilink = true
+         if (!('antidelete' in group)) group.antidelete = false
+         if (!('antilink' in group)) group.antilink = false
          if (!('antivirtex' in group)) group.antivirtex = true
          if (!('filter' in group)) group.filter = false
          if (!('left' in group)) group.left = false
@@ -55,7 +55,7 @@ module.exports = (m) => {
             jid: m.chat,
             activity: 0,
             autoread: true,
-            antidelete: true,
+            antidelete: false,
             antilink: false,
             antivirtex: false,
             filter: false,
@@ -92,7 +92,7 @@ module.exports = (m) => {
    if (setting) {
   	if (!('autodownload' in setting)) setting.autodownload = false
   	if (!('debug' in setting)) setting.debug = false
-      if (!('chatbot' in setting)) setting.chatbot = true
+      if (!('chatbot' in setting)) setting.chatbot = false
       if (!('error' in setting)) setting.error = []
       if (!('pluginDisable' in setting)) setting.pluginDisable = []
       if (!('groupmode' in setting)) setting.groupmode = false
@@ -114,7 +114,7 @@ module.exports = (m) => {
    } else {
       global.db.setting = {
          autodownload: false,
-         chatbot: true,
+         chatbot: false,
          debug: false,
          error: [],
          pluginDisable: [],
