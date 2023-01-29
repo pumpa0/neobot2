@@ -46,7 +46,7 @@ module.exports = (m) => {
          if (!('mute' in group)) group.mute = false
          if (!('member' in group)) group.member = {}
          if (!('text_left' in group)) group.text_left = ''
-         if (!('text_welcome' in group)) group.text_welcome = ''
+         if (!('text_welcome' in group)) group.text_welcome = 'Welcome +tag'
          if (!('welcome' in group)) group.welcome = true
          if (!isNumber(group.expired)) group.expired = 0
          if (!('stay' in group)) group.stay = false
