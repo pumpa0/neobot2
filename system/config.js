@@ -7,7 +7,7 @@ global.database = 'database'
 // Maximum upload file size limit (Default : 100 MB)
 global.max_upload = 50
 // Delay for spamming protection (Default : 3 seconds)
-global.cooldown = 3
+global.cooldown = 0
 // User Limitation (Default : 25)
 global.limit = 20
 // Time to be temporarily banned and others (Default : 30 minutes)
