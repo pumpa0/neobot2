@@ -22,19 +22,6 @@ module.exports = async (client, m) => {
       if (m.isGroup && groupSet.autoread) await client.readMessages([m.key])
       if (!m.isGroup) await client.readMessages([m.key])
       if (m.isGroup) groupSet.activity = new Date() * 1
-      if (m.chat.endsWith('broadcast') && m.mtype != 'protocolMessage') {
-         let caption = `乂  *S T O R I E S*\n\n`
-         if (/video|image/.test(m.mtype)) {
-            caption += `${body ? body : ''}\n\n`
-            caption += `*From : @${m.sender.replace(/@.+/, '')} (${client.getName(m.sender)})*`
-            const media = await m.download()
-            client.sendFile(global.forwards, media, '', caption)
-         } else if (/extended/.test(m.mtype)) {
-            caption += `${body ? body : ''}\n\n`
-            caption += `*From : @${m.sender.replace(/@.+/, '')} (${client.getName(m.sender)})*`
-            client.reply(global.forwards, caption)
-         }
-      }
       if (m.isGroup && !groupSet.stay && (new Date * 1) >= groupSet.expired && groupSet.expired != 0) {
          return client.reply(m.chat, Func.texted('italic', '🚩 Bot time has expired and will leave from this group, thank you.', null, {
             mentions: participants.map(v => v.id)
